@@ -1,9 +1,9 @@
 name: Deploy workflow
 run-name: Deploying application
 on:
-    pull_request:
-        types:
-            - closed
+  push:
+    branches:
+      - main
 
 jobs:
     build:
@@ -48,5 +48,5 @@ jobs:
                 environment_name: Abctechapi-env-1
                 version_label: ${{ github.ref_name }}-R${{ github.run_id }}-V${{ github.run_number }}
                 region: us-east-1
-                deployment_package: ./staging/Package/abctechapi-0.0.3-SNAPSHOT.war
+                deployment_package: ./staging/Package/*.war
 
