@@ -19,4 +19,4 @@ jobs:
                 distribution: 'temurin'
                 java-version: 17
           - name: Run test and building
-            run: ./gradlew clean test compile war:war
+            run: ./gradlew clean test compileJava bootWar
