@@ -1,0 +1,18 @@
+# Gradle-specific
+.gradle/
+build/
+out/
+*.iml
+.gradle.kts/
+*.jar
+*.war
+
+# IntelliJ IDEA-specific
+.idea/
+*.iws
+*.ipr
+
+# Eclipse-specific
+.classpath
+.project
+.settings/
