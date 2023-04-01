@@ -4,4 +4,4 @@ WORKDIR /usr/app
 
 COPY . .
 
-RUN cp build/libs/*.war /usr/local/tomcat/webapps/ROOT.war
+RUN cp staging/Package/*.war /usr/local/tomcat/webapps/ROOT.war
