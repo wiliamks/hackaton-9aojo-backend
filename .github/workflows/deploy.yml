@@ -55,7 +55,7 @@ jobs:
                 ECR_REPOSITORY: docker_nodejs_demo
                 IMAGE_TAG: nodejs_demo_image
               run: |
-                docker build -t 420455272363.dkr.ecr.us-east-1.amazonaws.com/hackaton-ecr:VideoTraining .
-                docker push 420455272363.dkr.ecr.us-east-1.amazonaws.com/hackaton-ecr:VideoTraining
+                docker build -t 469718260356.dkr.ecr.us-east-1.amazonaws.com/hackaton-ecr:VideoTraining .
+                docker push 469718260356.dkr.ecr.us-east-1.amazonaws.com/hackaton-ecr:VideoTraining
             
 
