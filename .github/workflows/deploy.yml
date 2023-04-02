@@ -3,7 +3,7 @@ run-name: Deploying application
 on:
   push:
     branches:
-      - develop
+      - main
 
 jobs:
     build:        
@@ -17,9 +17,9 @@ jobs:
                 distribution: 'temurin'
                 java-version: 17
             - name: Run test and building
-              run: ./gradlew clean test compileJava bootWar
+              run: ./gradlew clean test compileJava bootJar
             - name: Moving war 
-              run: mkdir staging && cp build/libs/*.war staging
+              run: mkdir staging && cp build/libs/*.jar staging/app.jar
             - name: Upload archive
               uses: actions/upload-artifact@v3
               with:
@@ -55,7 +55,7 @@ jobs:
                 ECR_REPOSITORY: docker_nodejs_demo
                 IMAGE_TAG: nodejs_demo_image
               run: |
-                docker build -t 420455272363.dkr.ecr.us-east-1.amazonaws.com/hackaton-ecr:VideoTraining .
-                docker push 420455272363.dkr.ecr.us-east-1.amazonaws.com/hackaton-ecr:VideoTraining
+                docker build -t 469718260356.dkr.ecr.us-east-1.amazonaws.com/hackaton-ecr:VideoTraining .
+                docker push 469718260356.dkr.ecr.us-east-1.amazonaws.com/hackaton-ecr:VideoTraining
             
 
