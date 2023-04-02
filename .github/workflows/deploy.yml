@@ -17,9 +17,9 @@ jobs:
                 distribution: 'temurin'
                 java-version: 17
             - name: Run test and building
-              run: ./gradlew clean test compileJava bootWar
+              run: ./gradlew clean test compileJava bootJar
             - name: Moving war 
-              run: mkdir staging && cp build/libs/*.war staging
+              run: mkdir staging && cp build/libs/*.jar staging/app.jar
             - name: Upload archive
               uses: actions/upload-artifact@v3
               with:
