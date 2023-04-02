@@ -9,4 +9,4 @@ COPY . .
 # Set the entry point to the Spring Boot application
 ENTRYPOINT ["java", "-jar", "staging/Package/app.jar"]
 
-EXPOSE 8080
+EXPOSE 80
